@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Contact for  edsonromeu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <style>
+  :root{  
+--Green200lighter:hsl(148, 38%, 91%);
+--Green600medium:hsl(169, 82%, 27%);
+--Red:hsl(0, 66%, 54%);
+--White:hsl(0, 0%, 100%);
+--Grey500medium: hsl(186, 15%, 59%);
+--Grey900darker: hsl(187, 24%, 22%);
+}
+  </style>
+</head>
+
+<body class="bg-green-200" style="font-family: 'Karla', sans-serif;">
+ <div class="flex flex-col justify-center items-center bg-gray-400" style="width: 26rem;">
+  <div class="flex justify-center items-center">
+    <img src="./assets/images/icon-success-check.svg"></img>
+    <h3> Message Sent</h3>     
+  </div>
+  <div class="flex flex-col justify-center text-left">    
+    <p class=""> Thanks for completing the form. We'll be in touch soon!</p>    
+  </div>
+ </div>
+  <div class="mx-auto flex max-w-3xl items-center justify-center min-h-screen p-12 sm:py-4 px-3">
+    <div class="w-full rounded-xl bg-white p-2 shadow-2xl">
+      <div class="bg-white px-6 sm:py-8 lg:px-10 lg:py-12">  
+        <div class="max-w-3xl text-left">
+          <h3 class="text-2xl font-semibold text-gray-900 sm:text-3xl">Contact us</h3>      
+        </div>
+        <form action="#" method="POST" class="mx-auto max-w-xl sm:mt-12 lg:mt-10">
+          <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+            <div>
+              <label for="first-name" class="block text-sm/6 font-semibold text-gray-900">First name</label>
+              <div class="mt-2.5">
+                <input type="text" name="first-name" id="firstName" autocomplete="given-name" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600">
+                <span id="erroFname" class="text-sm text-red-500 hidden">This field is required</span>
+              </div>
+              <script>
+                var firstName = document.getElementById('first-name').value;                  
+                var erroFname = document.querySelector('erroFname').value;
+                  if(!firstName){
+                    erroFname.classList.remove('hidden')
+                  }else(
+                    erroFname.classList.add('hidden')
+                  )
+              </script>
+            </div>
+            <div>
+              <label for="last-name" class="block text-sm/6 font-semibold text-gray-900">Last name</label>
+              <div class="mt-2.5">
+                <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600">
+                <span id="erroLname" class="text-sm text-red-500 hidden">This field is required</span>
+              </div>
+              <script>
+                  var lastName = document.querySelector('last-name').value
+                  var erroLname = document.getElementById('erro-lname').value
+                  if(!lastName){
+                    erroLname.classList.remove('hidden')
+                  }else(
+                    erroLname.classList.add('hidden')
+                  )
+              </script>
+            </div>        
+            <div class="sm:col-span-2">
+              <label for="email" class="block text-sm/6 font-semibold text-gray-900">Email address</label>
+              <div class="mt-2.5">
+                <input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600">
+                <span id="erro-email" class="text-sm text-red-500 hidden">This field is required</span>
+              </div>
+              <script>
+                  var email = document.getElementById('email').value
+                  var erroEmail = document.getElementById('erro-email').value
+                  if(!email){
+                    erroEmail.classList.remove('hidden')
+                  }else(
+                    erroEmail.classList.add('hidden')
+                  )              
+              </script>
+            </div>
+            <div class="sm:col-span-2">
+              <label for="input-ratio" class="block text-sm/6 font-semibold text-gray-900">Query Type *</label>
+              <div class="mt-2.5">
+                <div class="grid grid-cols-2 gap-4">                  
+                  <div class="flex items-center p-4 rounded-md bg-white outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
+                    <input id="push-everything" name="push-notifications" type="radio" checked class="relative size-5 appearance-none rounded-full border border-gray-300 bg-white before:absolute before:inset-1 before:rounded-full before:bg-white not-checked:before:hidden checked:border-indigo-600 checked:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden">
+                    <label for="push-everything" class="ml-3 block text-sm/6 font-medium text-gray-900">General Enquiry</label>
+                  </div>
+                  <div class="flex items-center p-4 rounded-md bg-white outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
+                    <input id="push-email" name="push-notifications" type="radio" class="relative size-5 appearance-none rounded-full border border-gray-300 bg-white before:absolute before:inset-1 before:rounded-full before:bg-white not-checked:before:hidden checked:border-indigo-600 checked:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden">
+                    <label for="push-email" class="ml-3 block text-sm/6 font-medium text-gray-900">Support Request</label>
+                  </div>
+                </div>
+                <span id="erro-type" class="mt-2 text-sm text-red-500 hidden">Please select a query type</span>
+              </div>
+            </div>
+            <div class="sm:col-span-2">
+              <label for="message" class="block text-sm/6 font-semibold text-gray-900">Message</label>
+              <div class="mt-2.5">
+                <textarea name="message" id="message" rows="4" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"></textarea>            
+              </div>
+              <span class="text-sm text-red-500 hidden">This field is required</span>
+              <script>
+                document.getElementById('botao de enviar!').addEventListener('submit', function(event){
+                  event.preventDefault()
+                  
+                  const type = document.querySelector('input[name="push-notifications"]:checked').value
+                  const message = document.getElementById('message').value
+                  const consent = document.getElementById('consent').checked
+                  const erroFname = document.getElementById('erro-fname')
+                  const erroLname = document.getElementById('erro-lname')
+                  const erroEmail = document.getElementById('erro-email')
+                  const erroType = document.getElementById('erro-type')
+                  const erroMessage = document.getElementById('erro-message')
+                  erroFname.classList.add('hidden')
+                  erroLname.classList.add('hidden')
+                  erroEmail.classList.add('hidden')
+                  erroType.classList.add('hidden')
+                  erroMessage.classList.add('hidden')
+                  if(!firstName){
+                    erroFname.classList.remove('hidden')
+                  }
+                  if(!lastName){
+                    erroLname.classList.remove('hidden')
+                  }
+                  if(!email){
+                    erroEmail.classList.remove('hidden')
+                  }
+                  if(!type){
+                    erroType.classList.remove('hidden')
+                  }
+                  if(!message){
+                    erroMessage.classList.remove('hidden')
+                  }
+                  if(!consent){
+                    alert('You must consent to being contacted by the team')
+                  }
+                })
+              </script>
+            </div>
+            <div class="flex gap-x-4 sm:col-span-2">
+              <div class="flex h-6 items-center">
+                <input id="consent" name="consent" type="checkbox" class="relative size-4 appearance-none rounded border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+              </div>
+              <label for="consent" class="text-sm/6 text-gray-600">
+                I consent to being contacted by the team *
+              </label>
+            </div>
+          </div>
+          <div class="mt-10">
+            <button type="submit" class="block w-full rounded-md bg-green-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>    
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
