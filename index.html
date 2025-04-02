@@ -3,25 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <title>Contact for  edsonromeu</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-  <style>
-  :root{  
---Green200lighter:hsl(148, 38%, 91%);
---Green600medium:hsl(169, 82%, 27%);
---Red:hsl(0, 66%, 54%);
---White:hsl(0, 0%, 100%);
---Grey500medium: hsl(186, 15%, 59%);
---Grey900darker: hsl(187, 24%, 22%);
-}
-  </style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          green: {
+            200: 'hsl(148, 38%, 91%)',
+            600: 'hsl(169, 82%, 27%)',
+          },
+          gray: {
+            300: 'hsl(186, 15%, 59%)',
+            900: 'hsl(187, 24%, 22%)',
+          },
+          red: {
+            500: 'hsl(0, 66%, 54%)',
+          }
+        }
+      }
+    }
+  }
+</script>
 </head>
 
-<body class="bg-green-200" style="font-family: 'Karla', sans-serif;">
+<body class="font-sans bg-[hsl(148,38%,91%)]">
  <div id="modalConfirma" class="flex justify-center flex-col items-center bg-gray-400 p-2 m-2 hidden"  style="width: 26rem;">
   <div class="flex justify-center items-center">
     <img src="./assets/images/icon-success-check.svg"></img>
@@ -42,21 +54,21 @@
             <div>
               <label for="first-name" class="block text-sm/6 font-semibold text-gray-900">First name *</label>
               <div class="mt-2.5">
-                <input type="text" name="first-name" id="firstName" autocomplete="given-name" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-green-600">
+                <input type="text" name="first-name" id="firstName" autocomplete="given-name" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 border border-black-950 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-green-600">
                 <span id="erroFname" class="text-sm text-red-500 hidden">This field is required</span>
               </div>
             </div>
             <div>
               <label for="last-name" class="block text-sm/6 font-semibold text-gray-900">Last name *</label>
               <div class="mt-2.5">
-                <input type="text" name="last-name" id="lastName" autocomplete="family-name" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-green-600">
+                <input type="text" name="last-name" id="lastName" autocomplete="family-name" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 border border-black-950 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-green-600">
                 <span id="erroLname" class="text-sm text-red-500 hidden">This field is required</span>
               </div>
             </div>
             <div class="sm:col-span-2">
               <label for="email" class="block text-sm/6 font-semibold text-gray-900">Email address *</label>
               <div class="mt-2.5">
-                <input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-green-600">
+                <input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 border border-black-950 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-green-600">
                 <span id="erroEmail" class="text-sm text-red-500 hidden">please enter a valid email adress</span>
               </div>
             </div>
@@ -64,22 +76,22 @@
               <label for="input-ratio" class="block text-sm/6 font-semibold text-gray-900">Query Type *</label>
               <div class="mt-2.5">
                 <div class="grid grid-cols-2 gap-4">
-                  <div class="flex items-center p-4 rounded-md bg-white outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-green-600">
-                    <input id="push-everything" name="push-notifications" type="radio" checked class="relative size-5 appearance-none rounded-full border border-gray-300 bg-white before:absolute before:inset-1 before:rounded-full before:bg-white not-checked:before:hidden checked:border-green-600 checked:bg-green-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden">
-                    <label for="push-everything" class="ml-3 block text-sm/6 font-medium text-gray-900">General Enquiry</label>
+                  <div class="flex items-center p-4 rounded-md bg-white border border-black-950 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-green-600">
+                      <input id="push-everything" name="push-notifications" type="radio" class="relative size-5 appearance-none rounded-full border border-gray-300 bg-white before:absolute before:inset-1 before:rounded-full before:bg-white not-checked:before:hidden checked:border-green-600 checked:bg-green-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden">
+                      <label for="push-everything" class="ml-3 block text-sm/6 font-medium text-gray-900">General Enquiry</label>
                   </div>
-                  <div class="flex items-center p-4 rounded-md bg-white outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-green-600">
-                    <input id="push-email" name="push-notifications" type="radio" class="relative size-5 appearance-none rounded-full border border-gray-300 bg-white before:absolute before:inset-1 before:rounded-full before:bg-white not-checked:before:hidden checked:border-green-600 checked:bg-green-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden">
-                    <label for="push-email" class="ml-3 block text-sm/6 font-medium text-gray-900">Support Request</label>
+                  <div class="flex items-center p-4 rounded-md bg-white border border-black-950 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-green-600">
+                      <input id="push-email" name="push-notifications" type="radio" class="relative size-5 appearance-none rounded-full border border-gray-300 bg-white before:absolute before:inset-1 before:rounded-full before:bg-white not-checked:before:hidden checked:border-green-600 checked:bg-green-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden">
+                      <label for="push-email" class="ml-3 block text-sm/6 font-medium text-gray-900">Support Request</label>
                   </div>
-                </div>
-                <span id="erroType" class="mt-2 text-sm text-red-500 hidden">Please select a query type</span>
+              </div>
+              <span id="erroType" class="mt-2 text-sm text-red-500 hidden">Please select a query type</span>
               </div>
             </div>
             <div class="sm:col-span-2">
               <label for="message" class="block text-sm/6 font-semibold text-gray-900">Message *</label>
               <div class="mt-2.5">
-                <textarea name="message" id="message" rows="4" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-green-600"></textarea>
+                <textarea name="message" id="message" rows="4" class="block w-full rounded-md bg-white border border-black-950 px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-green-600"></textarea>
                 <span id="erroMessage" class="text-sm text-red-500 hidden">This field is required</span>
               </div>
             </div>
